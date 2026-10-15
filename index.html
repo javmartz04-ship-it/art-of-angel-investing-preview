@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Art of Angel Investing: Digital Book + Toolkit | Tony Wilkins</title>
+<meta name="description" content="Tony Wilkins' book The Art of Angel Investing plus the eight-worksheet toolkit behind his philosophy-first framework. Built from 72 angel investments since 1991. $27, instant download.">
+<meta name="theme-color" content="#f7f8fb">
+<meta property="og:title" content="The Art of Angel Investing: Digital Book + Toolkit">
+<meta property="og:description" content="Learn angel investing from 72 real checks, before you write your own. $27, instant download.">
+<meta property="og:image" content="assets/book-hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%23001640%22/%3E%3Cpath d=%22M7 24l9-16 9 16%22 stroke=%22%23EBAA2B%22 stroke-width=%223%22 fill=%22none%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* The Art of Angel Investing, Digital Book + Toolkit, v1 (2026-10-15)
+   Brand, measured from the client's live page (artofangelinvesting.com/home):
+   blue #0668F3 is their interactive colour (links, CTAs) and the VSL's own motion graphics: the one accent.
+   Navy #001640 is the book cover and the Masterclass wordmark: the ink and the two dark bands.
+   Gold #EBAA2B lives only where the client put it: the book, the logo, the guarantee seal.
+   Type: Playfair Display + Inter (house pairing for institutional authority).
+   Skeleton: our MMI Foundation / Abbott sales-page anatomy. Nothing from the old page's layout. */
+:root{
+  --canvas:#f7f8fb; --soft:#eef2f9; --hair:#e1e6ef; --paper:#fff;
+  --ink:#0a1633; --body:#3a4459; --muted:#5a6479; --faint:#8a92a4;
+  --accent:#0668f3; --accent-hover:#0556cc; --accent-glow:rgba(6,104,243,.34); --accent-tint:rgba(6,104,243,.07);
+  --navy:#001640; --on-navy-em:#8fb8ff; --gold:#ebaa2b;
+  --lit-paper:radial-gradient(122% 78% at 50% -14%,#fff,#fafbfd 40%,#f1f4f9);
+  --lit-cream:radial-gradient(128% 82% at 50% -16%,#fff,#f8f9fc 36%,#eef1f8 74%,#e9edf6);
+  --lit-navy:radial-gradient(104% 78% at 14% -10%,#0a2d6b,#001f55 34%,#001640 66%,#000b24);
+  --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.32,.72,0,1);
+  --display:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+  --r:18px; --r-pill:999px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--body);font:400 17.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip;font-variant-numeric:lining-nums}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--display);color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.08;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;letter-spacing:-.015em;line-height:1.25}
+.em{color:var(--accent);font-style:italic}
+.navy .em{color:var(--on-navy-em)}
+.ln{display:block}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.narrow{width:min(860px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+section{position:relative}
+.sec{padding:104px 0}
+.sec + .sec{border-top:1px solid var(--hair)}
+.h2{font-size:clamp(32px,3.6vw,50px)}
+.sub{margin-top:18px;max-width:60ch;font-size:18px;color:var(--body)}
+.center{text-align:center}
+.center .sub{margin-inline:auto}
+
+/* eyebrow: muted caps with the accent tick */
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:600 12px/1.2 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";flex:none;width:22px;height:3px;border-radius:3px;background:var(--accent)}
+.eyebrow + h2,.eyebrow + h1{margin-top:18px}
+
+/* CTA: button-in-button with a kinetic arrow */
+.cta{display:inline-flex;align-items:center;gap:16px;min-height:66px;padding:9px 10px 9px 34px;border:0;border-radius:var(--r-pill);
+  background:var(--accent);color:#fff;font:700 18px/1.2 var(--sans);letter-spacing:-.01em;cursor:pointer;text-decoration:none;
+  box-shadow:0 14px 34px -12px var(--accent-glow),inset 0 1px 0 rgba(255,255,255,.22);transition:transform .5s var(--ease),background .3s var(--ease),box-shadow .5s var(--ease)}
+.cta .ico{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.16);transition:transform .5s var(--ease)}
+.cta:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 20px 44px -14px var(--accent-glow),inset 0 1px 0 rgba(255,255,255,.22)}
+.cta:hover .ico{transform:translateX(4px)}
+.cta:active{transform:translateY(0) scale(.99)}
+.risk{margin-top:16px;font-size:15px;color:var(--muted)}
+.risk b{color:var(--ink);font-weight:600}
+.navy .risk{color:rgba(255,255,255,.68)}
+.navy .risk b{color:#fff}
+
+/* ============ 01 HERO ============ */
+.hero{padding:34px 0 0;background:var(--lit-paper);overflow:hidden;text-align:center;border-bottom:1px solid var(--hair)}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto;height:860px;pointer-events:none;
+  background:radial-gradient(40% 50% at 20% 30%,rgba(6,104,243,.08),transparent 70%),radial-gradient(36% 44% at 82% 20%,rgba(235,170,43,.09),transparent 70%)}
+.hero > *{position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 9px;border-radius:var(--r-pill);background:#fff;border:1px solid var(--hair);
+  box-shadow:0 10px 24px -16px rgba(0,22,64,.35);font:600 12px/1 var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--ink)}
+.pill b{padding:6px 10px;border-radius:var(--r-pill);background:var(--navy);color:#fff;letter-spacing:.04em;font-size:12.5px}
+.hero h1{margin:18px auto 0;font-size:clamp(34px,4vw,58px);max-width:19ch}
+@media (min-width:1100px){.hero h1{max-width:none}.hero h1 .ln{white-space:nowrap}}
+.lede{margin:16px auto 0;max-width:66ch;font-size:clamp(17px,1.4vw,19px);line-height:1.6}
+.lede b{color:var(--ink);font-weight:600}
+
+/* VSL: double bezel */
+.bezel{padding:10px;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(231,236,245,.78));border:1px solid rgba(0,22,64,.07);
+  box-shadow:0 44px 96px -42px rgba(0,22,64,.45),inset 0 1px 0 #fff}
+.bezel-core{position:relative;border-radius:21px;overflow:hidden;background:#000b24;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.player{width:min(720px,100%);margin:24px auto 0}
+.player video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#000}
+.play{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:30px;gap:12px;border:0;cursor:pointer;
+  background:linear-gradient(180deg,rgba(0,11,36,.02),rgba(0,11,36,.36));color:#fff;font:600 16px/1.2 var(--sans);transition:opacity .4s var(--ease),background .4s var(--ease)}
+.play:hover{background:linear-gradient(180deg,rgba(0,11,36,0),rgba(0,11,36,.26))}
+.play .disc{position:relative;display:grid;place-items:center;width:84px;height:84px;border-radius:50%;background:var(--accent);box-shadow:0 18px 40px -10px rgba(6,104,243,.65);transition:transform .5s var(--ease)}
+.play .disc::after{content:"";position:absolute;inset:-10px;border-radius:50%;border:2px solid rgba(255,255,255,.55);animation:ripple 2.4s var(--ease) infinite}
+.play:hover .disc{transform:scale(1.06)}
+.play .label{padding:9px 18px;border-radius:var(--r-pill);background:rgba(0,11,36,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+@keyframes ripple{0%{transform:scale(.9);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+.chip{position:absolute;top:16px;left:16px;z-index:3;display:flex;align-items:center;gap:10px;padding:9px 16px;border-radius:var(--r-pill);background:rgba(247,248,251,.95);color:var(--ink);font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;box-shadow:0 10px 24px -12px rgba(0,0,0,.45);transition:opacity .4s var(--ease)}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.player.started .chip,.player.started .play{opacity:0;pointer-events:none}
+.hold{position:absolute;inset:0;z-index:2;display:none;place-items:center;border:0;background:transparent;cursor:pointer}
+.player.started .hold{display:grid}
+.hold .pz{display:grid;place-items:center;width:80px;height:80px;border-radius:50%;background:rgba(0,11,36,.55);backdrop-filter:blur(6px);opacity:0;transition:opacity .3s var(--ease)}
+.player.started.paused .hold .pz{opacity:1}
+.bar{position:absolute;left:0;right:0;bottom:0;z-index:3;height:5px;background:rgba(255,255,255,.22);opacity:0;transition:opacity .4s var(--ease)}
+.bar span{display:block;height:100%;width:0;background:var(--accent)}
+.player.started .bar{opacity:1}
+.endcard{position:absolute;inset:0;z-index:4;display:grid;place-items:center;align-content:center;gap:18px;padding:24px;text-align:center;
+  background:linear-gradient(rgba(0,11,36,.72),rgba(0,11,36,.84)),url(assets/vsl-poster.jpg) center/cover;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+.player.ended .endcard{opacity:1;pointer-events:auto}
+.player.ended .hold,.player.ended .bar{display:none}
+.endcard p{color:#fff;font:700 clamp(21px,2.5vw,30px)/1.2 var(--display);letter-spacing:-.01em;max-width:22ch}
+.again{border:0;background:none;color:rgba(255,255,255,.85);font:500 15px/1 var(--sans);text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:8px}
+.hero .cta-row{margin-top:24px}
+.incl{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:20px;list-style:none;font-size:15px;color:var(--ink);font-weight:500}
+.incl li{display:flex;align-items:center;gap:8px}
+.aff{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px 46px;margin-top:56px;padding:28px 0 34px;border-top:1px solid var(--hair)}
+.aff p{font:600 11.5px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--faint)}
+.aff img{height:46px;width:auto;filter:grayscale(1) contrast(1.1);opacity:.78;transition:filter .4s var(--ease),opacity .4s var(--ease)}
+.aff img:hover{filter:none;opacity:1}
+.aff img.box{height:38px;border-radius:6px}
+
+/* ============ 02 PROBLEM ============ */
+.problem{background:#fff}
+.prob-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:start}
+.nos{margin-top:30px;display:grid;gap:10px}
+.nos p{display:flex;align-items:center;gap:14px;font:600 19px/1.3 var(--sans);color:var(--ink);letter-spacing:-.01em}
+.nos p::before{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:#fdecec url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d23b3b' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M8 8l8 8M16 8l-8 8'/%3E%3C/svg%3E") center/16px no-repeat}
+.ledger{list-style:none;border-top:1px solid var(--hair)}
+.ledger li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px;padding:26px 0;border-bottom:1px solid var(--hair)}
+.ledger .n{font:700 15px/1.6 var(--sans);color:var(--accent);letter-spacing:.06em}
+.ledger h3{font-size:20px}
+.ledger p{margin-top:6px;font-size:16.5px;color:var(--body)}
+.ledger-k{font:600 12px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.reality{margin-top:28px;padding:22px 24px;border-radius:var(--r);background:var(--canvas);border:1px solid var(--hair);font-size:16.5px}
+.reality b{color:var(--ink)}
+
+/* ============ 03 REFRAME (navy band 1 of 2) ============ */
+.navy{background:var(--lit-navy);color:rgba(255,255,255,.78);border-top:1px solid rgba(255,255,255,.12)}
+.navy h2{color:#fff}
+.reframe{padding:120px 0;overflow:hidden}
+.reframe::after{content:"";position:absolute;right:-8%;top:-30%;width:60%;height:160%;pointer-events:none;background:radial-gradient(closest-side,rgba(235,170,43,.10),transparent 70%)}
+.reframe .wrap{position:relative;z-index:1}
+.reframe h2{font-size:clamp(38px,5vw,72px)}
+.rf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;margin-top:56px;align-items:center}
+.rf-copy p{font-size:18px;line-height:1.7}
+.rf-copy p + p{margin-top:16px}
+.rf-copy b{color:#fff;font-weight:600}
+.quote{position:relative;padding:40px 40px 34px;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.quote blockquote{font:italic 600 clamp(28px,3vw,40px)/1.18 var(--display);color:#fff;letter-spacing:-.01em}
+.quote blockquote::before{content:"\201C";display:block;font:700 84px/0.6 var(--display);color:var(--on-navy-em);margin-bottom:18px}
+.quote figcaption{display:flex;align-items:center;gap:14px;margin-top:26px;font-size:15px;color:rgba(255,255,255,.7)}
+.quote figcaption img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.quote figcaption b{display:block;color:#fff;font-weight:600}
+
+/* ============ 04 MECHANISM: horizontal rail ============ */
+.method{background:var(--lit-cream)}
+.rail{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:64px;list-style:none;text-align:left}
+.rail::before{content:"";position:absolute;left:24px;right:24px;top:24px;height:2px;background:linear-gradient(90deg,var(--accent),rgba(6,104,243,.18))}
+.rail li{position:relative}
+.rail .dot{position:relative;display:grid;place-items:center;width:50px;height:50px;border-radius:50%;background:#fff;border:2px solid var(--accent);color:var(--accent);font:700 15px/1 var(--sans);letter-spacing:.04em;box-shadow:0 0 0 8px var(--soft)}
+.rail .stage{margin-top:26px;font:600 12px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.rail h3{margin-top:10px;font-size:22px}
+.rail p{margin-top:10px;font-size:16px}
+.rail .tool{display:inline-block;margin-top:14px;padding:6px 12px;border-radius:var(--r-pill);background:#fff;border:1px solid var(--hair);font-size:13px;font-weight:600;color:var(--ink)}
+.method .cta-row{margin-top:64px;text-align:center}
+
+/* ============ 05 TONY ============ */
+.tony{background:#fff;overflow:hidden}
+.tony-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:72px;align-items:center}
+.portrait{position:relative}
+.portrait .frame{padding:10px;border-radius:30px;background:linear-gradient(180deg,#fff,#eef1f7);border:1px solid var(--hair);box-shadow:0 44px 90px -44px rgba(0,22,64,.5)}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:21px;background:#111}
+.portrait .tag{position:absolute;left:-18px;bottom:40px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--hair);box-shadow:0 24px 50px -24px rgba(0,22,64,.45);font-size:14px;color:var(--muted)}
+.portrait .tag b{display:block;font:700 17px/1.2 var(--sans);color:var(--ink)}
+.tony h2{font-size:clamp(40px,5vw,72px)}
+.tony .role{margin-top:12px;font:600 15px/1.4 var(--sans);color:var(--muted);letter-spacing:.02em}
+.tony .bio{margin-top:26px;font-size:17.5px}
+.tony .bio p + p{margin-top:14px}
+.tony .bio b{color:var(--ink);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:36px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stats div{padding:24px 0 22px}
+.stats div + div{padding-left:24px;border-left:1px solid var(--hair)}
+.stats b{display:block;font:700 clamp(36px,3.6vw,50px)/1 var(--display);color:var(--ink);letter-spacing:-.02em}
+.stats b small{font-size:.6em;color:var(--accent)}
+.stats > div > span{display:block;margin-top:8px;font-size:14px;color:var(--muted);line-height:1.4}
+
+/* ============ 06 PROOF ============ */
+.proof{background:var(--canvas)}
+.quotes{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;margin-top:52px;align-items:stretch}
+.tq{display:flex;flex-direction:column;padding:10px;border-radius:26px;background:linear-gradient(180deg,#fff,#f1f4f9);border:1px solid var(--hair);box-shadow:0 30px 70px -40px rgba(0,22,64,.35)}
+.tq-core{flex:1;display:flex;flex-direction:column;padding:34px 34px 30px;border-radius:18px;background:#fff;box-shadow:inset 0 0 0 1px rgba(0,22,64,.05)}
+.tq .stars{display:flex;gap:3px;color:var(--gold)}
+.tq blockquote{flex:1;margin-top:18px;font:600 20px/1.5 var(--sans);color:var(--ink);letter-spacing:-.01em}
+.tq.small blockquote{font-size:18px}
+.tq figcaption{display:flex;align-items:center;gap:14px;margin-top:26px;padding-top:22px;border-top:1px solid var(--hair);font-size:14.5px;color:var(--muted)}
+.tq figcaption img{width:54px;height:54px;border-radius:50%;object-fit:cover}
+.tq figcaption b{display:block;color:var(--ink);font-size:16px}
+
+/* ============ 07 OFFER ============ */
+.offer{background:#fff}
+.offer-grid{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:56px;align-items:start;margin-top:60px}
+.part + .part{margin-top:56px}
+.part-h{display:flex;align-items:baseline;gap:14px;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.part-h .n{font:700 13px/1 var(--sans);letter-spacing:.14em;color:var(--accent)}
+.part-h h3{font:700 26px/1.15 var(--display);letter-spacing:-.01em}
+.part-h > span:last-child{margin-left:auto;font-size:14px;color:var(--muted)}
+.book-row{display:grid;grid-template-columns:240px minmax(0,1fr);gap:36px;align-items:center;margin-top:28px}
+.book-row img{filter:drop-shadow(0 30px 30px rgba(0,22,64,.28));transform:rotate(-3deg)}
+.book-row p{font-size:17px}
+.checks{list-style:none;margin-top:16px;display:grid;gap:9px}
+.checks li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:16px;color:var(--ink)}
+.checks svg{margin-top:4px}
+.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px;list-style:none}
+.tool-card{display:grid;grid-template-columns:104px minmax(0,1fr);gap:18px;align-items:center;padding:14px 18px 14px 14px;border-radius:var(--r);background:var(--canvas);border:1px solid var(--hair);transition:transform .5s var(--ease),box-shadow .5s var(--ease),background .3s}
+.tool-card:hover{transform:translateY(-3px);background:#fff;box-shadow:0 24px 50px -30px rgba(0,22,64,.4)}
+.tool-card h4{font:700 16px/1.3 var(--sans);color:var(--ink)}
+.tool-card p{margin-top:4px;font-size:14.5px;line-height:1.5;color:var(--muted)}
+/* worksheet thumbnail rendered in HTML, in the book's own palette */
+.doc{position:relative;aspect-ratio:8.5/11;border-radius:6px;background:#fff;overflow:hidden;box-shadow:0 12px 24px -12px rgba(0,22,64,.45),0 0 0 1px rgba(0,22,64,.06);transform:rotate(-2deg);transition:transform .5s var(--spring)}
+.tool-card:hover .doc{transform:rotate(0) scale(1.04)}
+.doc .dh{height:30%;padding:7px 7px 0;background:linear-gradient(160deg,#0a2d6b,#001640 60%);border-bottom:3px solid var(--gold)}
+.doc .dh i{display:block;font:700 6.5px/1 var(--sans);letter-spacing:.14em;color:var(--gold);font-style:normal}
+.doc .dh u{display:block;margin-top:5px;font:700 8.5px/1.1 var(--sans);color:#fff;text-decoration:none}
+.doc .db{padding:7px;display:grid;gap:5px}
+.doc .db span{display:block;height:4px;border-radius:2px;background:#e3e8f1}
+.doc .db span.s{width:62%}
+.doc .db span.c{display:grid;grid-template-columns:7px 1fr;gap:4px;height:7px;background:none}
+.doc .db span.c::before{content:"";border:1.2px solid #b9c3d6;border-radius:1.5px}
+.doc .db span.c::after{content:"";height:4px;margin-top:1.5px;border-radius:2px;background:#e3e8f1}
+.doc .db span.t{height:26px;background:repeating-linear-gradient(90deg,#e3e8f1 0 1px,transparent 1px 25%),repeating-linear-gradient(#e3e8f1 0 1px,transparent 1px 33.3%);border:1px solid #e3e8f1;border-radius:2px}
+
+.price{position:sticky;top:28px;padding:10px;border-radius:30px;background:linear-gradient(180deg,#fff,#eaeef6);border:1px solid var(--hair);box-shadow:0 50px 100px -50px rgba(0,22,64,.55)}
+.price-core{padding:30px 30px 28px;border-radius:21px;background:#fff;box-shadow:inset 0 0 0 1px rgba(0,22,64,.05);text-align:center}
+.price-core img{width:62%;margin:-6px auto 8px;filter:drop-shadow(0 24px 22px rgba(0,22,64,.25))}
+.price-core h3{font:700 22px/1.2 var(--display)}
+.price-core .what{margin-top:6px;font-size:14.5px;color:var(--muted)}
+.price-core ul{list-style:none;margin:20px 0 0;text-align:left;border-top:1px solid var(--hair)}
+.price-core li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--hair);font-size:15px;color:var(--ink)}
+.price-core li span{color:var(--muted);white-space:nowrap}
+.amt{margin-top:22px;font:700 70px/1 var(--display);color:var(--ink);letter-spacing:-.03em}
+.amt sup{font-size:.42em;vertical-align:.95em;margin-right:2px}
+.amt-k{margin-top:8px;font-size:14px;color:var(--muted)}
+.price .cta{margin-top:22px;width:100%;justify-content:space-between;font-size:17px;padding-left:26px}
+.price .risk{font-size:14px}
+.price .seal-echo{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding-top:16px;border-top:1px dashed var(--hair);font-size:14px;color:var(--ink);font-weight:600}
+.price .seal-echo img{width:34px;height:34px}
+.next{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:64px;padding-top:32px;border-top:1px solid var(--hair);list-style:none}
+.next li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;font-size:15.5px}
+.next .n{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent-tint);color:var(--accent);font:700 13px/1 var(--sans)}
+.next b{display:block;color:var(--ink)}
+.next-k{margin-top:64px;font:600 12px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--faint)}
+.next-k + .next{margin-top:18px}
+
+/* ============ 08 GUARANTEE: sealed band ============ */
+.guarantee{padding:88px 0;background:var(--lit-cream)}
+.g-band{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;align-items:center;padding:44px 52px;border-radius:28px;background:#fff;
+  border:1px solid var(--hair);box-shadow:0 0 0 6px #fff,0 0 0 7px rgba(235,170,43,.6),0 40px 90px -50px rgba(0,22,64,.45)}
+.g-band img{width:200px;height:200px;transform:rotate(-8deg)}
+.g-band h2{font-size:clamp(30px,3.2vw,44px)}
+.g-band p{margin-top:14px;font-size:17.5px;max-width:58ch}
+.g-band p b{color:var(--ink)}
+
+/* ============ 09 QUALIFICATION ============ */
+.fit{background:#fff}
+.fit-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:28px;margin-top:52px}
+.fit-col{padding:36px;border-radius:24px;border:1px solid var(--hair)}
+.fit-col.yes{background:linear-gradient(180deg,#f3f7ff,#fff 70%);border-color:rgba(6,104,243,.22)}
+.fit-col.no{background:var(--canvas)}
+.fit-col > b{display:block;font:600 12px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.fit-col ul{list-style:none;margin-top:20px;display:grid;gap:20px}
+.fit-col li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px}
+.fit-col li h3{font-size:18px}
+.fit-col li p{margin-top:4px;font-size:16px}
+.fit-col.no li{font-size:16.5px;color:var(--ink)}
+.mk{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;margin-top:1px}
+.yes .mk{background:var(--accent)}
+.no .mk{background:#e3e7ef}
+
+/* ============ 10 FAQ ============ */
+.faq{background:var(--canvas)}
+.qa{margin-top:44px;border-top:1px solid var(--hair)}
+.qa details{border-bottom:1px solid var(--hair)}
+.qa summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 4px;cursor:pointer;list-style:none;font:600 19px/1.35 var(--sans);color:var(--ink);letter-spacing:-.01em}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary i{flex:none;position:relative;width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--hair);transition:transform .5s var(--ease),background .3s}
+.qa summary i::before,.qa summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;border-radius:2px;background:var(--ink)}
+.qa summary i::after{transform:rotate(90deg);transition:transform .5s var(--ease)}
+.qa details[open] summary i{background:var(--accent);border-color:var(--accent)}
+.qa details[open] summary i::before,.qa details[open] summary i::after{background:#fff}
+.qa details[open] summary i::after{transform:rotate(0)}
+.qa .a{padding:0 60px 26px 4px;font-size:17px}
+
+/* ============ 11 CLOSE (navy band 2 of 2) + footer folded in ============ */
+.close{padding:112px 0 96px;text-align:center;overflow:hidden}
+.close::before{content:"";position:absolute;inset:auto -10% -40% -10%;height:80%;pointer-events:none;background:radial-gradient(50% 50% at 50% 100%,rgba(235,170,43,.16),transparent 70%)}
+.close .wrap{position:relative}
+.close h2{font-size:clamp(32px,3.9vw,56px);max-width:22ch;margin-inline:auto}
+@media (min-width:1100px){.close h2{max-width:none}.close h2 .ln{white-space:nowrap}}
+.close .sub{margin-inline:auto}
+.close .sub{color:rgba(255,255,255,.76)}
+.close-book{width:220px;margin:44px auto 36px;filter:drop-shadow(0 34px 34px rgba(0,0,0,.45));transform:rotate(-3deg)}
+.foot{background:#fff;padding:44px 0 40px;text-align:center;border-top:1px solid var(--hair)}
+.foot img{height:40px;width:auto;margin:0 auto}
+.foot p{max-width:78ch;margin:16px auto 0;font-size:13px;line-height:1.6;color:var(--faint)}
+.foot .legal{display:flex;justify-content:center;gap:22px;margin-top:16px;font-size:13px}
+.foot .legal a{color:var(--muted);text-decoration:none}
+.foot .legal a:hover{color:var(--ink);text-decoration:underline}
+
+/* the font shorthand resets font-variant: Playfair would fall back to old-style figures */
+.stats b,.amt,.part-h h3,.price-core h3,.endcard p{font-variant-numeric:lining-nums}
+
+/* toast for the empty checkout preview */
+.toast{position:fixed;left:50%;bottom:28px;z-index:50;transform:translate(-50%,20px);visibility:hidden;opacity:0;max-width:min(460px,calc(100% - 32px));padding:14px 20px;border-radius:14px;background:var(--navy);color:#fff;font-size:15px;box-shadow:0 20px 50px -20px rgba(0,0,0,.5);transition:all .4s var(--ease)}
+.toast.on{visibility:visible;opacity:1;transform:translate(-50%,0)}
+
+/* arrival */
+.rise{opacity:0;transform:translateY(18px);filter:blur(6px);animation:rise .9s var(--ease) forwards}
+.hero .pill.rise{animation-delay:.05s}.hero h1 .ln:nth-child(1){animation-delay:.12s}.hero h1 .ln:nth-child(2){animation-delay:.24s}
+.hero .lede.rise{animation-delay:.34s}.hero .player.rise{animation-delay:.44s}.hero .cta-row.rise{animation-delay:.54s}
+.hero h1 .ln{opacity:0;transform:translateY(18px);filter:blur(6px);animation:rise .9s var(--ease) forwards}
+@keyframes rise{to{opacity:1;transform:none;filter:none}}
+.rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease)}
+.rv.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){
+  .rise,.hero h1 .ln,.rv{opacity:1;transform:none;filter:none;animation:none;transition:none}
+  .play .disc::after{animation:none}
+}
+
+/* ============ responsive ============ */
+@media (max-width:1020px){
+  .offer-grid{grid-template-columns:minmax(0,1fr)}
+  .price{position:relative;top:0;max-width:460px;margin-inline:auto}
+  .rail{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .rail::before{display:none}
+  .tony-grid,.prob-grid,.rf-grid{grid-template-columns:minmax(0,1fr);gap:48px}
+  .portrait{max-width:480px;margin-inline:auto;width:100%}
+  .quotes,.fit-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  body{font-size:16.5px}
+  .sec{padding:76px 0}
+  .wrap,.narrow{width:min(1180px,100% - 32px)}
+  .hero{padding-top:28px}
+  .pill{font-size:10.5px;letter-spacing:.12em}
+  .player{margin-top:24px}
+  .bezel{padding:6px;border-radius:20px}.bezel-core{border-radius:15px}
+  .play{justify-content:flex-end;padding-bottom:16px;gap:10px}
+  .play .disc{width:64px;height:64px}.play .disc svg{width:22px;height:22px}
+  .play .label{font-size:14px;padding:7px 14px}
+  .chip{top:10px;left:10px;padding:7px 12px;font-size:10.5px}
+  .cta{font-size:16.5px;padding-left:24px;min-height:60px;gap:12px}.cta .ico{width:42px;height:42px}
+  .incl{flex-direction:column;align-items:center;gap:8px}
+  .aff{gap:16px 30px;margin-top:44px}.aff img{height:40px}.aff img.box{height:30px}.aff p{width:100%}
+  .rail{grid-template-columns:minmax(0,1fr);row-gap:0}
+  .rail li{display:grid;grid-template-columns:50px minmax(0,1fr);column-gap:18px;padding:22px 0;border-bottom:1px solid var(--hair)}
+  .rail li > *:not(.dot){grid-column:2}
+  .rail .dot{grid-row:1 / span 4;width:44px;height:44px;box-shadow:none}
+  .rail .stage{margin-top:4px}
+  .reframe{padding:84px 0}
+  .quote{padding:30px 24px 26px}
+  .portrait .tag{left:12px;bottom:12px}
+  .stats div + div{padding-left:14px}
+  .stats span{font-size:12.5px}
+  .book-row{grid-template-columns:minmax(0,1fr);gap:20px}
+  .book-row img{width:180px;margin-inline:auto}
+  .tools{grid-template-columns:minmax(0,1fr)}
+  .tool-card{grid-template-columns:78px minmax(0,1fr)}
+  .part-h{flex-wrap:wrap}.part-h > span:last-child{margin-left:0;width:100%}
+  .price-core{padding:24px 20px}
+  .next{grid-template-columns:minmax(0,1fr)}
+  .g-band{grid-template-columns:minmax(0,1fr);padding:34px 24px;text-align:center}
+  .g-band img{width:150px;height:150px;margin:0 auto}
+  .g-band p{margin-inline:auto}
+  .fit-col{padding:26px 22px}
+  .tq-core{padding:26px 22px}
+  .qa summary{font-size:17px}.qa .a{padding-right:8px}
+  .close-book{width:170px}
+}
+</style>
+</head>
+<body>
+<main id="page">
+
+<!-- 01 HERO: eyebrow, headline, subheadline, VSL, CTA -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="pill rise"><b>$27</b>Digital Book + Toolkit</p>
+    <h1 id="h1"><span class="ln">Learn Angel Investing From 72 Real Checks.</span><span class="ln em">Before You Write Your Own.</span></h1>
+    <p class="lede rise">Tony Wilkins' book plus the eight worksheets behind his <b>philosophy-first framework</b>, built from 30+ years of winners, write-offs and every market cycle in between.</p>
+
+    <div class="player rise" id="player">
+      <div class="bezel"><div class="bezel-core">
+        <video id="vsl" src="assets/vsl-preview.mp4" poster="assets/vsl-poster.jpg" muted autoplay loop playsinline preload="auto" width="1920" height="1080"></video>
+        <span class="chip"><i></i>Press Play: 1:14</span>
+        <button class="play" type="button" aria-label="Play Tony's video, 1 minute 14 seconds"><span class="disc"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="label">Watch With Sound</span></button>
+        <button class="hold" type="button" aria-label="Pause or resume the video"><span class="pz"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span></button>
+        <div class="bar" aria-hidden="true"><span id="vbar"></span></div>
+        <div class="endcard">
+          <p>Start with the framework Tony wishes he had.</p>
+          <a class="cta buy" href="#">Get The Book + Toolkit<span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <button class="again" type="button">Watch Again</button>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="cta-row rise">
+      <a class="cta buy" href="#">Get The Book + Toolkit<span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <p class="risk"><b>$27 one-time.</b> Instant download, 30-day money-back guarantee.</p>
+      <ul class="incl">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>The full digital book</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>8 investor worksheets</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Built from 72 investments</li>
+      </ul>
+    </div>
+
+    <div class="aff rv">
+      <p>Tony is affiliated with</p>
+      <img src="assets/aff-a.png" alt="Hyde Park Angels" width="616" height="424">
+      <img class="box" src="assets/aff-1871.webp" alt="1871" width="300" height="181">
+      <img src="assets/aff-b.png" alt="2HUB" width="384" height="349">
+    </div>
+  </div>
+</section>
+
+<!-- 02 PROBLEM -->
+<section class="sec problem" aria-labelledby="h-problem">
+  <div class="wrap prob-grid">
+    <div class="rv">
+      <h2 class="h2" id="h-problem"><span class="ln">Most Angel Investors Learn</span><span class="ln em">By Losing Money First.</span></h2>
+      <div class="nos">
+        <p>There is no CFA for angel investing.</p>
+        <p>No structured roadmap.</p>
+        <p>No proven curriculum.</p>
+      </div>
+      <p class="reality"><b>The reality?</b> Many early-stage investments fail. The investors who succeed aren't the ones who avoid losses entirely. They're the ones who approach every investment with a repeatable system.</p>
+    </div>
+    <div class="rv">
+      <p class="ledger-k">Without a framework, most new angels</p>
+      <ol class="ledger">
+        <li><span class="n">01</span><div><h3>Write checks on excitement, not conviction</h3><p>A great pitch feels like a great investment. It usually isn't the same thing.</p></div></li>
+        <li><span class="n">02</span><div><h3>Skip proper diligence</h3><p>Without a checklist, the step that would have caught the problem is the one that gets skipped.</p></div></li>
+        <li><span class="n">03</span><div><h3>Follow the crowd instead of their own judgment</h3><p>Someone else's conviction is not a philosophy, and it won't be there when the round goes sideways.</p></div></li>
+        <li><span class="n">04</span><div><h3>Learn the expensive lessons after the money is gone</h3><p>Tuition is fine. Paying it without keeping the lesson is the real loss.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 03 REFRAME -->
+<section class="navy reframe" aria-labelledby="h-reframe">
+  <div class="wrap">
+    <h2 id="h-reframe" class="rv"><span class="ln">You Don't Need A Fund.</span><span class="ln em">You Need A Framework.</span></h2>
+    <div class="rf-grid">
+      <div class="rf-copy rv">
+        <p>Today, anyone can access startup deals through crowdfunding platforms, angel groups and private networks. <b>The barrier to entry is lower than ever.</b></p>
+        <p>The challenge isn't access. It's knowing what to do once the opportunity appears. The next generation of successful angels won't win because they saw more deals. <b>They'll win because they developed better judgment.</b></p>
+      </div>
+      <figure class="quote rv">
+        <blockquote>Every check is either treasure or tuition.</blockquote>
+        <figcaption><img src="assets/tony-smile.webp" alt="Tony Wilkins" width="472" height="428" loading="lazy"><span><b>Tony Wilkins</b>72 investments since 1991</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 04 MECHANISM -->
+<section class="sec method center" aria-labelledby="h-method">
+  <div class="wrap">
+    <p class="eyebrow rv">The method inside the book</p>
+    <h2 class="h2 rv" id="h-method">The Philosophy-First Framework.</h2>
+    <p class="sub rv">Tony doesn't teach you to chase deals. He teaches you to decide who you are as an investor first, so every check after that follows the same rules.</p>
+    <ol class="rail">
+      <li class="rv"><span class="dot">01</span><p class="stage">Philosophy</p><h3>Know your why</h3><p>Build a personal investment philosophy that guides every decision you make.</p><span class="tool">Investment Philosophy Template</span></li>
+      <li class="rv"><span class="dot">02</span><p class="stage">Founders</p><h3>Read the person</h3><p>Evaluate founders beyond the pitch deck, starting with whether they can be coached.</p><span class="tool">Coachability Scorecard</span></li>
+      <li class="rv"><span class="dot">03</span><p class="stage">Decision</p><h3>Diligence, then decide</h3><p>Run the same diligence process on every deal and make the call with conviction.</p><span class="tool">75-15-10 Framework</span></li>
+      <li class="rv"><span class="dot">04</span><p class="stage">Portfolio</p><h3>Manage and exit on a plan</h3><p>Track every check and exit according to a plan, not emotion.</p><span class="tool">Exit Planning Worksheet</span></li>
+    </ol>
+    <div class="cta-row rv">
+      <a class="cta buy" href="#">Get The Book + Toolkit<span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <p class="risk"><b>$27 one-time.</b> Instant download, 30-day money-back guarantee.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 TONY (before the price) -->
+<section class="sec tony" aria-labelledby="h-tony">
+  <div class="wrap tony-grid">
+    <div class="portrait rv">
+      <div class="frame"><img src="assets/tony-portrait.jpg" alt="Tony Wilkins, angel investor and author" width="1400" height="2099" loading="lazy"></div>
+      <p class="tag"><b>Investing since 1991</b>Investor, advisor, coach</p>
+    </div>
+    <div class="rv">
+      <h2 id="h-tony">Meet Tony Wilkins.</h2>
+      <p class="role">Angel investor, advisor, executive coach and startup mentor</p>
+      <div class="bio">
+        <p>Tony wrote his first check in 1991. Since then he has made <b>72 investments in early-stage founders</b>. Some grew into life-changing returns. Plenty of them went to zero. The winners far outnumbered the losses, but both taught him what's in this book.</p>
+        <p>Across market booms, crashes and multiple funding cycles, he built a <b>philosophy-first approach</b> focused on judgment, discipline and long-term thinking. There was no CFA, CPA or MBA for angel investing and no clear roadmap, so he made one.</p>
+        <p>This is the framework he wishes he had when he wrote his first check.</p>
+      </div>
+      <div class="stats">
+        <div><b data-count="72">72</b><span>Investments since 1991</span></div>
+        <div><b><span data-count="30">30</span><small>+</small></b><span>Years of angel investing</span></div>
+        <div><b><span data-count="25">25</span><small>x</small></b><span>Portfolio exits, up to</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PROOF -->
+<section class="sec proof center" aria-labelledby="h-proof">
+  <div class="wrap">
+    <h2 class="h2 rv" id="h-proof">Trusted By Investors And Founders.</h2>
+    <div class="quotes" style="text-align:left">
+      <figure class="tq rv"><div class="tq-core">
+        <span class="stars" aria-label="5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span>
+        <blockquote>"Tony turns years of hard-earned investing experience into clear, actionable insight. If you're starting out in angel investing, he shortens the learning curve in a way very few people can. Tony's biggest impact on me was helping me focus on signal over noise, especially around founders, portfolio construction, and disciplined decision-making."</blockquote>
+        <figcaption><img src="assets/ezeibe.jpg" alt="Ezeibe A." width="240" height="240" loading="lazy"><span><b>Ezeibe A.</b>Director, AI Business Solutions at Microsoft</span></figcaption>
+      </div></figure>
+      <figure class="tq small rv"><div class="tq-core">
+        <span class="stars" aria-label="5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span>
+        <blockquote>"Tony Wilkins is one of the most thoughtful and insightful angel investors I know. He understands opportunities, their associated risks, and their potential upside exceptionally well. I have invested with Tony before, have been pleased with the experience, and would gladly invest with him again."</blockquote>
+        <figcaption><img src="assets/craig.jpg" alt="Craig Davis" width="240" height="240" loading="lazy"><span><b>Craig Davis</b>President and CEO at NovaScan</span></figcaption>
+      </div></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 07 OFFER: everything they get for one price -->
+<section class="sec offer" id="offer" aria-labelledby="h-offer">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow rv">Everything included</p>
+      <h2 class="h2 rv" id="h-offer">Everything You Get <span class="em">For One Price.</span></h2>
+      <p class="sub rv">One purchase, one download. The book teaches you how Tony thinks. The toolkit makes you do it on a real deal.</p>
+    </div>
+    <div class="offer-grid">
+      <div>
+        <div class="part rv">
+          <div class="part-h"><span class="n">PART 01</span><h3>The Art of Angel Investing</h3><span>Digital book</span></div>
+          <div class="book-row">
+            <img src="assets/book-3d.webp" alt="The Art of Angel Investing by Tony Wilkins, book cover" width="1100" height="1128" loading="lazy">
+            <div>
+              <p>Tony's philosophy-first approach to angel investing, the book his whole program is built on. Not about chasing deals. About building the judgment to tell which risks are worth taking.</p>
+              <ul class="checks">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>How the asset class actually works, and why it isn't venture capital with a smaller checkbook</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>How to develop your own investment philosophy</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Frameworks for assessing founders and opportunities</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>A disciplined approach to risk and decision-making</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Practical lessons from 72 real angel investments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="part rv">
+          <div class="part-h"><span class="n">PART 02</span><h3>The Investor Toolkit</h3><span>8 downloadable worksheets</span></div>
+          <ul class="tools">
+            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 01</i><u>Investor Type</u></div><div class="db"><span class="c"></span><span class="c"></span><span class="c"></span><span class="c"></span><span class="s"></span></div></div><div><h4>Investor Type Self-Assessment</h4><p>Find out what kind of angel you are before you write a check.</p></div></li>
+            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 02</i><u>My Philosophy</u></div><div class="db"><span></span><span class="s"></span><span></span><span></span><span class="s"></span></div></div><div><h4>Investment Philosophy Template</h4><p>Put your why, your check size and your rules in writing.</p></div></li>
+            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 03</i><u>Deal Sourcing</u></div><div class="db"><span class="t"></span><span class="s"></span></div></div><div><h4>Deal Sourcing Tracker</h4><p>Log every opportunity, where it came from and where it stands.</p></div></li>
+            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 04</i><u>Due Diligence</u></div><div class="db"><span class="c"></span><span class="c"></span><span class="c"></span><span class="c"></span><span class="c"></span></div></div><div><h4>Due Diligence Framework</h4><p>The same checklist on every deal, so no step gets skipped.</p></div></li>
+            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 05</i><u>Coachability</u></div><div class="db"><span class="t"></span><span></span><span class="s"></span></div></div><div><h4>Founder Coachability Scorecard</h4><p>Score the founder, not just the pitch deck.</p></div></li>
+            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 06</i><u>75-15-10</u></div><div class="db"><span></span><span class="s"></span><span class="t"></span></div></div><div><h4>75-15-10 Decision Framework</h4><p>Tony's framework for making the final call on a deal.</p></div></li>
+            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 07</i><u>My Portfolio</u></div><div class="db"><span class="t"></span><span class="t"></span></div></div><div><h4>Portfolio Tracking System</h4><p>Every check, follow-on and outcome in one place.</p></div></li>
+            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 08</i><u>Exit Plan</u></div><div class="db"><span></span><span class="c"></span><span class="c"></span><span class="c"></span><span class="s"></span></div></div><div><h4>Exit Planning Worksheet</h4><p>Decide your exit before you invest, so emotion doesn't decide it for you.</p></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="price rv" aria-label="Price">
+        <div class="price-core">
+          <img src="assets/book-ipad.webp" alt="The Art of Angel Investing on paper and tablet" width="1100" height="1040" loading="lazy">
+          <h3>The Art of Angel Investing</h3>
+          <p class="what">Digital Book + Investor Toolkit</p>
+          <ul>
+            <li>The full digital book<span>Instant download</span></li>
+            <li>8 investor worksheets<span>Downloadable</span></li>
+            <li>The Philosophy-First Framework<span>Inside the book</span></li>
+            <li>30-day guarantee<span>Full refund</span></li>
+          </ul>
+          <p class="amt"><sup>$</sup>27</p>
+          <p class="amt-k">One-time payment. No subscription.</p>
+          <a class="cta buy" href="#">Get The Book + Toolkit<span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <p class="risk">Secure checkout. Delivered to your inbox.</p>
+          <p class="seal-echo"><img src="assets/seal.webp" alt="" width="600" height="600">Covered by the 30-day money-back guarantee</p>
+        </div>
+      </aside>
+    </div>
+
+    <p class="next-k rv">After you click</p>
+    <ol class="next rv">
+      <li><span class="n">01</span><span><b>Check out securely</b>One page, one payment of $27.</span></li>
+      <li><span class="n">02</span><span><b>Download everything</b>The book and all eight worksheets arrive instantly.</span></li>
+      <li><span class="n">03</span><span><b>Start with Tool 01</b>Find your investor type, then read the book with it beside you.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 08 GUARANTEE: directly after the price -->
+<section class="guarantee" aria-labelledby="h-guarantee">
+  <div class="narrow">
+    <div class="g-band rv">
+      <img src="assets/seal.webp" alt="30-day guarantee seal, by Tony Wilkins" width="600" height="600" loading="lazy">
+      <div>
+        <h2 id="h-guarantee">Treasure Or Tuition. <span class="em">Never Lose The Lesson.</span></h2>
+        <p>This book won't eliminate losses. Nothing can. It will help you avoid the avoidable ones. <b>If it's not for you, email us within 30 days for a full refund.</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 QUALIFICATION: two-sided -->
+<section class="sec fit center" aria-labelledby="h-fit">
+  <div class="wrap">
+    <h2 class="h2 rv" id="h-fit">Built For Three Kinds Of Investors.</h2>
+    <div class="fit-grid" style="text-align:left">
+      <div class="fit-col yes rv">
+        <b>This is for you if you're</b>
+        <ul>
+          <li><span class="mk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>An aspiring angel</h3><p>You've been circling the idea for a year, assuming the door is locked. It isn't. You can start from $100.</p></div></li>
+          <li><span class="mk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>A professional building wealth</h3><p>Jobs aren't for life and retirement may last decades. You want an asset class that keeps you current as AI changes every industry.</p></div></li>
+          <li><span class="mk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>A check or two in</h3><p>You invested on excitement and want a system you can repeat on every deal from here.</p></div></li>
+        </ul>
+      </div>
+      <div class="fit-col no rv">
+        <b>This is not for you if you want</b>
+        <ul>
+          <li><span class="mk"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="#5a6479" stroke-width="3" stroke-linecap="round"/></svg></span>A hot tip on the next startup to back</li>
+          <li><span class="mk"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="#5a6479" stroke-width="3" stroke-linecap="round"/></svg></span>Promised returns. Nobody can honestly offer them</li>
+          <li><span class="mk"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="#5a6479" stroke-width="3" stroke-linecap="round"/></svg></span>Someone to make your decisions for you</li>
+          <li><span class="mk"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="#5a6479" stroke-width="3" stroke-linecap="round"/></svg></span>Legal, tax or personal investment advice</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 FAQ -->
+<section class="sec faq" aria-labelledby="h-faq">
+  <div class="narrow">
+    <div class="center">
+      <p class="eyebrow rv">Questions</p>
+      <h2 class="h2 rv" id="h-faq">Frequently Asked Questions.</h2>
+    </div>
+    <div class="qa rv">
+      <details open><summary>What exactly do I get for $27?<i aria-hidden="true"></i></summary><div class="a">The full digital edition of The Art of Angel Investing plus the Investor Toolkit: eight downloadable worksheets (Investor Type Self-Assessment, Investment Philosophy Template, Deal Sourcing Tracker, Due Diligence Framework, Founder Coachability Scorecard, 75-15-10 Decision Framework, Portfolio Tracking System and Exit Planning Worksheet). One payment, no subscription.</div></details>
+      <details><summary>Is this a physical book?<i aria-hidden="true"></i></summary><div class="a">No. It's the digital edition, delivered instantly after checkout, so you can start reading and filling in the worksheets today.</div></details>
+      <details><summary>Do I need to be an accredited investor?<i aria-hidden="true"></i></summary><div class="a">No. Crowdfunding platforms let non-accredited investors back startups, and you can start from $100. The book is about judgment, which matters at any check size.</div></details>
+      <details><summary>I've never invested in a startup. Is this too advanced?<i aria-hidden="true"></i></summary><div class="a">It was written for exactly that moment. Tony starts with how the asset class works and builds up to diligence, portfolio and exits. If you already have a check or two in, the toolkit turns what you did by instinct into a process you can repeat.</div></details>
+      <details><summary>Is this investment advice?<i aria-hidden="true"></i></summary><div class="a">No. It's education. Angel investing involves a high degree of risk, including the loss of your entire investment, and no returns are promised or implied.</div></details>
+      <details><summary>What if it's not for me?<i aria-hidden="true"></i></summary><div class="a">Email us within 30 days for a full refund.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11 CLOSE + footer folded in -->
+<section class="navy close" aria-labelledby="h-close">
+  <div class="wrap">
+    <h2 id="h-close" class="rv"><span class="ln">The Best Time To Plant A Tree Was 25 Years Ago.</span><span class="ln em">The Second Best Time Is Today.</span></h2>
+    <p class="sub rv">Invest with that horizon in mind. Start with the framework.</p>
+    <img class="close-book rv" src="assets/book-3d.webp" alt="" width="1100" height="1128" loading="lazy">
+    <div class="rv">
+      <a class="cta buy" href="#">Get The Book + Toolkit<span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <p class="risk"><b>$27 one-time.</b> Instant download, 30-day money-back guarantee.</p>
+    </div>
+  </div>
+</section>
+<footer class="foot">
+  <img src="assets/logo.svg" alt="The Art of Angel Investing" width="144" height="32">
+  <p>Angel investing involves a high degree of risk, including the loss of your entire investment. Content is educational and not investment, legal or tax advice. No returns are promised or implied.</p>
+  <p>This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of META PLATFORMS, INC.</p>
+  <p class="legal"><a href="https://artofangelinvesting.com/terms-of-use">Terms of Use</a><a href="https://artofangelinvesting.com/privacy-policy">Privacy Policy</a></p>
+  <p>&copy; 2026 Art Of Angel Investing. All rights reserved.</p>
+</footer>
+</main>
+
+<div class="toast" id="toast" role="status">Preview: the $27 checkout link goes here once it exists.</div>
+
+<script>
+// ===== CONFIG: paste the $27 Digital Book + Toolkit checkout URL here. Empty = preview mode (shows a note). =====
+const CONFIG = { CHECKOUT: '' };
+
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const buys = document.querySelectorAll('a.buy');
+  const toast = document.getElementById('toast');
+  if (CONFIG.CHECKOUT) buys.forEach(a => a.href = CONFIG.CHECKOUT + location.search); // carry UTMs / fbclid
+  else buys.forEach(a => a.addEventListener('click', e => { e.preventDefault(); toast.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => toast.classList.remove('on'), 3200); }));
+
+  // VSL: a silent preview loops on load. Press play: the full video restarts from 0:00 with sound.
+  const player = document.getElementById('player'), vsl = document.getElementById('vsl'), vbar = document.getElementById('vbar');
+  const FULL = 'assets/vsl.mp4';
+  const lite = reduce || (navigator.connection && navigator.connection.saveData);
+  if (lite) { vsl.removeAttribute('autoplay'); vsl.pause(); }
+  let started = false;
+  const start = () => {
+    if (!started) { started = true; vsl.loop = false; vsl.src = FULL; }
+    vsl.muted = false; vsl.currentTime = 0;
+    player.classList.add('started'); player.classList.remove('ended', 'paused');
+    vsl.play().catch(() => {});
+  };
+  player.querySelector('.play').addEventListener('click', start);
+  player.querySelector('.again').addEventListener('click', start);
+  player.querySelector('.hold').addEventListener('click', () => { vsl.paused ? vsl.play() : vsl.pause(); });
+  vsl.addEventListener('pause', () => { if (started) player.classList.add('paused'); });
+  vsl.addEventListener('play', () => player.classList.remove('paused'));
+  vsl.addEventListener('timeupdate', () => { if (started && vsl.duration) vbar.style.width = (vsl.currentTime / vsl.duration * 100) + '%'; });
+  vsl.addEventListener('ended', () => { if (!started) return; player.classList.add('ended'); player.classList.remove('paused'); });
+
+  // measurement: pushes to dataLayer / Meta Pixel / gtag when the host page has them. No-ops otherwise.
+  const track = (name, props = {}) => { try {
+    (window.dataLayer = window.dataLayer || []).push(Object.assign({event: name}, props));
+    if (window.fbq) window.fbq('trackCustom', name, props);
+    if (window.gtag) window.gtag('event', name, props);
+  } catch (e) {} };
+  buys.forEach(a => a.addEventListener('click', () => {
+    const sec = a.closest('section'); const where = a.closest('.endcard') ? 'video_end' : (sec ? sec.getAttribute('aria-labelledby') : 'other');
+    track('cta_click', {cta_location: where});
+    try { if (window.fbq) window.fbq('track', 'InitiateCheckout', {value: 27, currency: 'USD'}); } catch (e) {}
+  }));
+  { const sent = {};
+    vsl.addEventListener('timeupdate', () => { if (!vsl.muted && vsl.duration) [25, 50, 75].forEach(q => { if (!sent[q] && vsl.currentTime / vsl.duration * 100 >= q) { sent[q] = 1; track('vsl_progress', {percent: q}); } }); });
+    vsl.addEventListener('play', () => { if (!vsl.muted && !sent.play) { sent.play = 1; track('vsl_play'); } });
+    vsl.addEventListener('ended', () => { if (!vsl.muted) track('vsl_complete'); }); }
+
+  // arrival reveals
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // count-up on the three real stats
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; cio.unobserve(e.target);
+    const el = e.target, end = +el.dataset.count;
+    if (reduce) return;
+    const t0 = performance.now(), D = 1400;
+    const step = t => { const k = Math.min(1, (t - t0) / D); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+    el.textContent = '0'; requestAnimationFrame(step);
+  }), {threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+})();
+</script>
+</body>
+</html>
