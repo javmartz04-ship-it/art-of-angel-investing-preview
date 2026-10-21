@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The Art of Angel Investing: Digital Book + Toolkit | Tony Wilkins</title>
-<meta name="description" content="Tony Wilkins' book The Art of Angel Investing plus the eight-worksheet toolkit behind his philosophy-first framework. Built from 72 angel investments since 1991. $27, instant download.">
+<meta name="description" content="Tony Wilkins' book The Art of Angel Investing plus three investor tools from his Masterclass: the Investor Type Self-Assessment, the Investment Phase and Timeframe Reference and the Portfolio Tracking Spreadsheet. Built from 72 angel investments since 1991. $27, instant download.">
 <meta name="theme-color" content="#f7f8fb">
 <meta property="og:title" content="The Art of Angel Investing: Digital Book + Toolkit">
 <meta property="og:description" content="Learn angel investing from 72 real checks, before you write your own. $27, instant download.">
@@ -122,6 +122,7 @@ section{position:relative}
 .aff img{height:46px;width:auto;filter:grayscale(1) contrast(1.1);opacity:.78;transition:filter .4s var(--ease),opacity .4s var(--ease)}
 .aff img:hover{filter:none;opacity:1}
 .aff img.box{height:38px;border-radius:6px}
+.aff img.hpa{height:52px}
 
 /* ============ 02 PROBLEM ============ */
 .problem{background:#fff}
@@ -155,6 +156,31 @@ section{position:relative}
 .quote figcaption{display:flex;align-items:center;gap:14px;margin-top:26px;font-size:15px;color:rgba(255,255,255,.7)}
 .quote figcaption img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 20%}
 .quote figcaption b{display:block;color:#fff;font-weight:600}
+/* ten checks: real data from the Phase & Timeframe Reference, drawn as ten cheques */
+.ten{padding:34px 34px 28px;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.ten-k{font:600 12px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.ten-row{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:8px;margin-top:20px;list-style:none}
+.ten-row li{position:relative;aspect-ratio:3/4;border-radius:7px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);
+  transform:translateY(10px);opacity:0;transition:transform .7s var(--ease),opacity .7s var(--ease),background .7s var(--ease)}
+.ten-row li::before,.ten-row li::after{content:"";position:absolute;left:18%;right:18%;height:2px;border-radius:2px;background:currentColor;opacity:.5}
+.ten-row li::before{top:34%}.ten-row li::after{top:52%;right:38%}
+.ten-row .z{color:rgba(255,255,255,.22)}
+.ten-row .f{color:rgba(255,255,255,.5);background:rgba(255,255,255,.08)}
+.ten-row .c{color:#fff;background:var(--accent);border-color:rgba(143,184,255,.7);box-shadow:0 12px 26px -10px rgba(6,104,243,.8)}
+.ten.in .ten-row li{transform:none;opacity:1}
+.ten.in .ten-row .z{opacity:.55}
+.ten-row li:nth-child(n){transition-delay:calc(var(--i,0) * 70ms + .25s)}
+.ten-key{display:grid;gap:0;margin-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+.ten-key div{display:grid;grid-template-columns:118px minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);align-items:baseline}
+.ten-key dt{display:flex;align-items:center;gap:9px;font:700 15px/1.3 var(--sans);color:#fff;white-space:nowrap}
+.ten-key dt::before{content:"";flex:none;width:9px;height:9px;border-radius:2px;background:rgba(255,255,255,.22)}
+.ten-key .f dt::before{background:rgba(255,255,255,.55)}
+.ten-key .c dt::before{background:var(--accent);box-shadow:0 0 0 2px rgba(143,184,255,.5)}
+.ten-key dd{font-size:15px;line-height:1.5;color:rgba(255,255,255,.7)}
+.ten-key dd b{color:#fff;font-weight:600}
+.ten figcaption{display:flex;align-items:center;gap:14px;margin-top:22px;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.6)}
+.ten figcaption img{flex:none;width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.ten figcaption b{display:block;font:italic 600 19px/1.3 var(--display);color:#fff;margin-bottom:3px}
 
 /* ============ 04 MECHANISM: horizontal rail ============ */
 .method{background:var(--lit-cream)}
@@ -165,7 +191,10 @@ section{position:relative}
 .rail .stage{margin-top:26px;font:600 12px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
 .rail h3{margin-top:10px;font-size:22px}
 .rail p{margin-top:10px;font-size:16px}
-.rail .tool{display:inline-block;margin-top:14px;padding:6px 12px;border-radius:var(--r-pill);background:#fff;border:1px solid var(--hair);font-size:13px;font-weight:600;color:var(--ink)}
+.rail .tool{display:inline-flex;align-items:center;gap:7px;margin-top:14px;padding:6px 12px 6px 9px;border-radius:var(--r-pill);background:#fff;border:1px solid var(--hair);font-size:13px;font-weight:600;color:var(--ink)}
+.rail .tool::before{content:"";width:10px;height:13px;border-radius:2px;background:linear-gradient(var(--navy) 0 34%,#fff 34%);box-shadow:0 0 0 1px rgba(0,22,64,.25)}
+.rail .tool.in-book{background:transparent;border-style:dashed;color:var(--muted)}
+.rail .tool.in-book::before{display:none}
 .method .cta-row{margin-top:64px;text-align:center}
 
 /* ============ 05 TONY ============ */
@@ -214,24 +243,47 @@ section{position:relative}
 .checks{list-style:none;margin-top:16px;display:grid;gap:9px}
 .checks li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:16px;color:var(--ink)}
 .checks svg{margin-top:4px}
-.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px;list-style:none}
-.tool-card{display:grid;grid-template-columns:104px minmax(0,1fr);gap:18px;align-items:center;padding:14px 18px 14px 14px;border-radius:var(--r);background:var(--canvas);border:1px solid var(--hair);transition:transform .5s var(--ease),box-shadow .5s var(--ease),background .3s}
-.tool-card:hover{transform:translateY(-3px);background:#fff;box-shadow:0 24px 50px -30px rgba(0,22,64,.4)}
-.tool-card h4{font:700 16px/1.3 var(--sans);color:var(--ink)}
-.tool-card p{margin-top:4px;font-size:14.5px;line-height:1.5;color:var(--muted)}
-/* worksheet thumbnail rendered in HTML, in the book's own palette */
-.doc{position:relative;aspect-ratio:8.5/11;border-radius:6px;background:#fff;overflow:hidden;box-shadow:0 12px 24px -12px rgba(0,22,64,.45),0 0 0 1px rgba(0,22,64,.06);transform:rotate(-2deg);transition:transform .5s var(--spring)}
-.tool-card:hover .doc{transform:rotate(0) scale(1.04)}
-.doc .dh{height:30%;padding:7px 7px 0;background:linear-gradient(160deg,#0a2d6b,#001640 60%);border-bottom:3px solid var(--gold)}
-.doc .dh i{display:block;font:700 6.5px/1 var(--sans);letter-spacing:.14em;color:var(--gold);font-style:normal}
-.doc .dh u{display:block;margin-top:5px;font:700 8.5px/1.1 var(--sans);color:#fff;text-decoration:none}
-.doc .db{padding:7px;display:grid;gap:5px}
-.doc .db span{display:block;height:4px;border-radius:2px;background:#e3e8f1}
-.doc .db span.s{width:62%}
-.doc .db span.c{display:grid;grid-template-columns:7px 1fr;gap:4px;height:7px;background:none}
-.doc .db span.c::before{content:"";border:1.2px solid #b9c3d6;border-radius:1.5px}
-.doc .db span.c::after{content:"";height:4px;margin-top:1.5px;border-radius:2px;background:#e3e8f1}
-.doc .db span.t{height:26px;background:repeating-linear-gradient(90deg,#e3e8f1 0 1px,transparent 1px 25%),repeating-linear-gradient(#e3e8f1 0 1px,transparent 1px 33.3%);border:1px solid #e3e8f1;border-radius:2px}
+/* toolkit: Tony's real pages (rendered from his PDFs) and a faithful replica of the workbook's register tab */
+.part-lede{margin-top:16px;font-size:16px;color:var(--muted)}
+.kit{list-style:none;margin-top:8px}
+.kit-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:36px;align-items:center;padding:36px 0;border-bottom:1px solid var(--hair)}
+.kit-row:last-child{border-bottom:0;padding-bottom:0}
+.kit-meta{display:flex;align-items:center;gap:10px;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.kit-meta b{flex:none;white-space:nowrap;padding:5px 9px;border-radius:var(--r-pill);background:var(--navy);color:#fff;font-size:11px;letter-spacing:.12em}
+.kit-copy h4{margin-top:14px;font:700 25px/1.15 var(--display);color:var(--ink);letter-spacing:-.01em;font-variant-numeric:lining-nums}
+.kit-copy > p,.kit-copy > div > p:not(.kit-meta){margin-top:10px;font-size:16.5px}
+.kit-copy .checks{margin-top:16px}
+.kit-copy .checks li{font-size:15.5px}
+.fan{position:relative;aspect-ratio:1/1.08;isolation:isolate}
+.fan img{position:absolute;top:4%;left:50%;width:70%;border-radius:5px;background:#fff;
+  box-shadow:0 1px 0 rgba(0,22,64,.06),0 0 0 1px rgba(0,22,64,.08),0 24px 40px -22px rgba(0,22,64,.55);transition:transform .8s var(--spring)}
+.fan img:nth-child(1){transform:translateX(-72%) rotate(-7deg) scale(.9);z-index:1}
+.fan img:nth-child(2){transform:translateX(-22%) rotate(7deg) scale(.9);z-index:2}
+.fan img:nth-child(3){transform:translateX(-50%) translateY(4%);z-index:3;box-shadow:0 0 0 1px rgba(0,22,64,.08),0 40px 60px -26px rgba(0,22,64,.6)}
+.kit-row:hover .fan img:nth-child(1){transform:translateX(-88%) rotate(-11deg) scale(.9)}
+.kit-row:hover .fan img:nth-child(2){transform:translateX(-12%) rotate(10deg) scale(.9)}
+.kit-row:hover .fan img:nth-child(3){transform:translateX(-50%) translateY(1%) scale(1.03)}
+.kit-row.wide{grid-template-columns:minmax(0,1fr);gap:30px}
+.kit-row.wide .kit-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+.kit-row.wide .kit-copy .checks{margin-top:4px}
+/* workbook replica: colors and labels read from the .xlsx itself */
+.sheet{border-radius:14px;overflow:hidden;background:#fff;border:1px solid rgba(0,22,64,.12);box-shadow:0 40px 70px -40px rgba(0,22,64,.55);font-family:Arial,Helvetica,sans-serif}
+.sheet-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#eef1f6;border-bottom:1px solid #dde2ea}
+.sheet-bar i{width:11px;height:11px;border-radius:50%;background:#d3d8e1}
+.sheet-bar span{margin-left:10px;font:500 12.5px/1 var(--sans);color:#5a6479}
+.sheet-body{overflow:hidden}
+.sheet-title{padding:16px 18px 14px;background:#232b57;border-bottom:3px solid #f2a61e}
+.sheet-title small{display:block;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#f2a61e;font-weight:700}
+.sheet-title b{display:block;margin-top:6px;font-size:19px;color:#fff}
+.sheet-title span{display:block;margin-top:3px;font-size:11.5px;font-style:italic;color:#c3cedd}
+.sheet table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px}
+.sheet th{padding:8px 8px;background:#171e3e;color:#fff;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:left;border-right:1px solid #2d3666}
+.sheet td{height:28px;padding:0 8px;border-right:1px solid #e3e8f1;border-bottom:1px solid #e3e8f1;background:#f7f9fb;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sheet tr.ex td{background:#fff;color:#747f94;font-style:italic}
+.sheet td:nth-child(n+3){text-align:right}.sheet td:nth-child(4),.sheet td:nth-child(5),.sheet td:nth-child(6){text-align:left}
+.sheet-tabs{display:flex;gap:2px;padding:0 10px;background:#eef1f6;border-top:1px solid #dde2ea;overflow:hidden;white-space:nowrap}
+.sheet-tabs span{padding:8px 12px;font:500 11.5px/1 var(--sans);color:#5a6479}
+.sheet-tabs .on{background:#fff;color:#232b57;font-weight:700;box-shadow:inset 0 2px 0 #f2a61e}
 
 .price{position:sticky;top:28px;padding:10px;border-radius:30px;background:linear-gradient(180deg,#fff,#eaeef6);border:1px solid var(--hair);box-shadow:0 50px 100px -50px rgba(0,22,64,.55)}
 .price-core{padding:30px 30px 28px;border-radius:21px;background:#fff;box-shadow:inset 0 0 0 1px rgba(0,22,64,.05);text-align:center}
@@ -328,6 +380,7 @@ section{position:relative}
 @media (prefers-reduced-motion:reduce){
   .rise,.hero h1 .ln,.rv{opacity:1;transform:none;filter:none;animation:none;transition:none}
   .play .disc::after{animation:none}
+  .ten-row li{opacity:1;transform:none;transition:none}
 }
 
 /* ============ responsive ============ */
@@ -367,8 +420,12 @@ section{position:relative}
   .stats span{font-size:12.5px}
   .book-row{grid-template-columns:minmax(0,1fr);gap:20px}
   .book-row img{width:180px;margin-inline:auto}
-  .tools{grid-template-columns:minmax(0,1fr)}
-  .tool-card{grid-template-columns:78px minmax(0,1fr)}
+  .kit-row{grid-template-columns:minmax(0,1fr);gap:22px;padding:30px 0}
+  .ten{padding:28px 20px 24px}.ten-row{gap:5px}
+  .ten-key div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .fan{width:min(300px,86%);margin-inline:auto}
+  .kit-row.wide .kit-copy{grid-template-columns:minmax(0,1fr);gap:4px}
+  .sheet td:nth-child(n+5),.sheet th:nth-child(n+5){display:none}
   .part-h{flex-wrap:wrap}.part-h > span:last-child{margin-left:0;width:100%}
   .price-core{padding:24px 20px}
   .next{grid-template-columns:minmax(0,1fr)}
@@ -390,7 +447,7 @@ section{position:relative}
   <div class="wrap">
     <p class="pill rise"><b>$27</b>Digital Book + Toolkit</p>
     <h1 id="h1"><span class="ln">Learn Angel Investing From 72 Real Checks.</span><span class="ln em">Before You Write Your Own.</span></h1>
-    <p class="lede rise">Tony Wilkins' book plus the eight worksheets behind his <b>philosophy-first framework</b>, built from 30+ years of winners, write-offs and every market cycle in between.</p>
+    <p class="lede rise">Tony Wilkins' book on his <b>philosophy-first framework</b>, plus three working tools from his Masterclass. Built from 30+ years of winners and write-offs.</p>
 
     <div class="player rise" id="player">
       <div class="bezel"><div class="bezel-core">
@@ -412,14 +469,14 @@ section{position:relative}
       <p class="risk"><b>$27 one-time.</b> Instant download, 30-day money-back guarantee.</p>
       <ul class="incl">
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>The full digital book</li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>8 investor worksheets</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>3 tools from the Masterclass</li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Built from 72 investments</li>
       </ul>
     </div>
 
     <div class="aff rv">
       <p>Tony is affiliated with</p>
-      <img src="assets/aff-a.png" alt="Hyde Park Angels" width="616" height="424">
+      <img class="hpa" src="assets/aff-hpa.svg" alt="Hyde Park Angels" width="192" height="74">
       <img class="box" src="assets/aff-1871.webp" alt="1871" width="300" height="181">
       <img src="assets/aff-b.png" alt="2HUB" width="384" height="349">
     </div>
@@ -459,9 +516,19 @@ section{position:relative}
         <p>Today, anyone can access startup deals through crowdfunding platforms, angel groups and private networks. <b>The barrier to entry is lower than ever.</b></p>
         <p>The challenge isn't access. It's knowing what to do once the opportunity appears. The next generation of successful angels won't win because they saw more deals. <b>They'll win because they developed better judgment.</b></p>
       </div>
-      <figure class="quote rv">
-        <blockquote>Every check is either treasure or tuition.</blockquote>
-        <figcaption><img src="assets/tony-smile.webp" alt="Tony Wilkins" width="472" height="428" loading="lazy"><span><b>Tony Wilkins</b>72 investments since 1991</span></figcaption>
+      <figure class="ten rv" aria-labelledby="ten-k">
+        <p class="ten-k" id="ten-k">If you write ten checks</p>
+        <ol class="ten-row" aria-hidden="true">
+          <li class="z"></li><li class="z"></li><li class="z"></li><li class="z"></li><li class="z"></li>
+          <li class="f"></li><li class="f"></li><li class="f"></li>
+          <li class="c"></li><li class="c"></li>
+        </ol>
+        <dl class="ten-key">
+          <div class="z"><dt>About five</dt><dd><b>Go to zero.</b> Most announce themselves inside the first three years.</dd></div>
+          <div class="f"><dt>Two or three</dt><dd><b>Flatline.</b> Hovering between modest returns and failure.</dd></div>
+          <div class="c"><dt>One or two</dt><dd><b>Carry the portfolio.</b> And make the whole exercise worth doing.</dd></div>
+        </dl>
+        <figcaption><img src="assets/tony-smile.webp" alt="Tony Wilkins" width="472" height="428" loading="lazy"><span><b>"Every check is either treasure or tuition."</b>The shape of Tony's own portfolio after three decades. From the Phase &amp; Timeframe Reference, included.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -474,10 +541,10 @@ section{position:relative}
     <h2 class="h2 rv" id="h-method">The Philosophy-First Framework.</h2>
     <p class="sub rv">Tony doesn't teach you to chase deals. He teaches you to decide who you are as an investor first, so every check after that follows the same rules.</p>
     <ol class="rail">
-      <li class="rv"><span class="dot">01</span><p class="stage">Philosophy</p><h3>Know your why</h3><p>Build a personal investment philosophy that guides every decision you make.</p><span class="tool">Investment Philosophy Template</span></li>
-      <li class="rv"><span class="dot">02</span><p class="stage">Founders</p><h3>Read the person</h3><p>Evaluate founders beyond the pitch deck, starting with whether they can be coached.</p><span class="tool">Coachability Scorecard</span></li>
-      <li class="rv"><span class="dot">03</span><p class="stage">Decision</p><h3>Diligence, then decide</h3><p>Run the same diligence process on every deal and make the call with conviction.</p><span class="tool">75-15-10 Framework</span></li>
-      <li class="rv"><span class="dot">04</span><p class="stage">Portfolio</p><h3>Manage and exit on a plan</h3><p>Track every check and exit according to a plan, not emotion.</p><span class="tool">Exit Planning Worksheet</span></li>
+      <li class="rv"><span class="dot">01</span><p class="stage">Philosophy</p><h3>Know your why</h3><p>Build a personal investment philosophy that guides every decision you make.</p><span class="tool">Investor Type Self-Assessment</span></li>
+      <li class="rv"><span class="dot">02</span><p class="stage">Founders</p><h3>Read the person</h3><p>Evaluate founders beyond the pitch deck, starting with whether they can be coached.</p><span class="tool in-book">Inside the book</span></li>
+      <li class="rv"><span class="dot">03</span><p class="stage">Decision</p><h3>Diligence, then decide</h3><p>Run the same diligence process on every deal and make the call with conviction.</p><span class="tool">Phase &amp; Timeframe Reference</span></li>
+      <li class="rv"><span class="dot">04</span><p class="stage">Portfolio</p><h3>Manage it like a professional</h3><p>Track every check, thesis and distribution, and review it every quarter, not on emotion.</p><span class="tool">Portfolio Tracking Spreadsheet</span></li>
     </ol>
     <div class="cta-row rv">
       <a class="cta buy" href="#">Get The Book + Toolkit<span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
@@ -521,7 +588,7 @@ section{position:relative}
         <figcaption><img src="assets/ezeibe.jpg" alt="Ezeibe A." width="240" height="240" loading="lazy"><span><b>Ezeibe A.</b>Director, AI Business Solutions at Microsoft</span></figcaption>
       </div></figure>
       <figure class="tq small rv"><div class="tq-core">
-        <span class="stars" aria-label="5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span>
+        <span class="stars" aria-label="5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span>
         <blockquote>"Tony Wilkins is one of the most thoughtful and insightful angel investors I know. He understands opportunities, their associated risks, and their potential upside exceptionally well. I have invested with Tony before, have been pleased with the experience, and would gladly invest with him again."</blockquote>
         <figcaption><img src="assets/craig.jpg" alt="Craig Davis" width="240" height="240" loading="lazy"><span><b>Craig Davis</b>President and CEO at NovaScan</span></figcaption>
       </div></figure>
@@ -557,17 +624,47 @@ section{position:relative}
         </div>
 
         <div class="part rv">
-          <div class="part-h"><span class="n">PART 02</span><h3>The Investor Toolkit</h3><span>8 downloadable worksheets</span></div>
-          <ul class="tools">
-            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 01</i><u>Investor Type</u></div><div class="db"><span class="c"></span><span class="c"></span><span class="c"></span><span class="c"></span><span class="s"></span></div></div><div><h4>Investor Type Self-Assessment</h4><p>Find out what kind of angel you are before you write a check.</p></div></li>
-            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 02</i><u>My Philosophy</u></div><div class="db"><span></span><span class="s"></span><span></span><span></span><span class="s"></span></div></div><div><h4>Investment Philosophy Template</h4><p>Put your why, your check size and your rules in writing.</p></div></li>
-            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 03</i><u>Deal Sourcing</u></div><div class="db"><span class="t"></span><span class="s"></span></div></div><div><h4>Deal Sourcing Tracker</h4><p>Log every opportunity, where it came from and where it stands.</p></div></li>
-            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 04</i><u>Due Diligence</u></div><div class="db"><span class="c"></span><span class="c"></span><span class="c"></span><span class="c"></span><span class="c"></span></div></div><div><h4>Due Diligence Framework</h4><p>The same checklist on every deal, so no step gets skipped.</p></div></li>
-            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 05</i><u>Coachability</u></div><div class="db"><span class="t"></span><span></span><span class="s"></span></div></div><div><h4>Founder Coachability Scorecard</h4><p>Score the founder, not just the pitch deck.</p></div></li>
-            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 06</i><u>75-15-10</u></div><div class="db"><span></span><span class="s"></span><span class="t"></span></div></div><div><h4>75-15-10 Decision Framework</h4><p>Tony's framework for making the final call on a deal.</p></div></li>
-            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 07</i><u>My Portfolio</u></div><div class="db"><span class="t"></span><span class="t"></span></div></div><div><h4>Portfolio Tracking System</h4><p>Every check, follow-on and outcome in one place.</p></div></li>
-            <li class="tool-card"><div class="doc" aria-hidden="true"><div class="dh"><i>TOOL 08</i><u>Exit Plan</u></div><div class="db"><span></span><span class="c"></span><span class="c"></span><span class="c"></span><span class="s"></span></div></div><div><h4>Exit Planning Worksheet</h4><p>Decide your exit before you invest, so emotion doesn't decide it for you.</p></div></li>
-          </ul>
+          <div class="part-h"><span class="n">PART 02</span><h3>The Investor Toolkit</h3><span>3 tools from Tony's Masterclass</span></div>
+          <p class="part-lede">The same tools Tony's Masterclass students work from. Real pages, shown below.</p>
+          <ol class="kit">
+            <li class="kit-row">
+              <div class="fan" aria-hidden="false"><img src="assets/toolkit/assess-4.webp" alt="" width="900" height="1165" loading="lazy"><img src="assets/toolkit/assess-2.webp" alt="" width="900" height="1165" loading="lazy"><img src="assets/toolkit/assess-1.webp" alt="Investor Type Self-Assessment, page 1" width="900" height="1165" loading="lazy"></div>
+              <div class="kit-copy">
+                <p class="kit-meta"><b>Tool 01</b>Worksheet &middot; PDF &middot; 4 pages</p>
+                <h4>Investor Type Self-Assessment</h4>
+                <p>Decide what kind of angel you will be before a founder decides for you. Honest about your hours, your capital and your temperament.</p>
+                <ul class="checks"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>What you can actually commit: hours, check size, capital you can lose entirely</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>The three investor types, and why Tony says to aspire to the strategic counsellor</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Lead or follow, the honest fit test, and the one-sentence investor you want to be</li></ul>
+              </div>
+            </li>
+            <li class="kit-row">
+              <div class="fan" aria-hidden="false"><img src="assets/toolkit/phase-4.webp" alt="" width="900" height="1165" loading="lazy"><img src="assets/toolkit/phase-2.webp" alt="" width="900" height="1165" loading="lazy"><img src="assets/toolkit/phase-1.webp" alt="Investment Phase and Timeframe Reference, page 1" width="900" height="1165" loading="lazy"></div>
+              <div class="kit-copy">
+                <p class="kit-meta"><b>Tool 02</b>Reference &middot; PDF &middot; 5 pages</p>
+                <h4>Investment Phase &amp; Timeframe Reference</h4>
+                <p>What really happens to a check over ten years, and what your job is in each stretch of it.</p>
+                <ul class="checks"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>If you write ten checks: the shape of Tony's own portfolio after three decades</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>The three phases, years 1-3, 3-7 and 8+, and your job in each</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Loans versus equity, plus SAFEs, convertible notes, preferred stock and cap tables in plain English</li></ul>
+              </div>
+            </li>
+            <li class="kit-row wide">
+              <div class="sheet" role="img" aria-label="The Portfolio Tracking Spreadsheet open on its Portfolio register tab">
+              <div class="sheet-bar"><i></i><i></i><i></i><span>Portfolio_Tracking_Spreadsheet.xlsx</span></div>
+              <div class="sheet-body">
+                <div class="sheet-title"><small>The Art of Angel Investing &middot; Masterclass &middot; Tony Wilkins</small><b>Portfolio register</b><span>One row per investment. Blue cells are yours to fill in.</span></div>
+                <table><thead><tr><th>Company</th><th>Date</th><th>Amount</th><th>Vehicle</th><th>Round</th><th>Phase</th><th>Multiple</th></tr></thead>
+                <tbody><tr class="ex"><td>Example Co.</td><td>2024-03-14</td><td>$25,000</td><td>SAFE</td><td>Seed</td><td>Years 1-3</td><td>10.0x</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+              </div>
+              <div class="sheet-tabs"><span class="on">Portfolio</span><span>Thesis</span><span>Contacts</span><span>Distributions</span><span>Tax &amp; cost basis</span><span>Documents</span><span>Quarterly notes</span></div>
+            </div>
+              <div class="kit-copy">
+                <div>
+                  <p class="kit-meta"><b>Tool 03</b>Excel workbook &middot; 9 tabs</p>
+                  <h4>Portfolio Tracking Spreadsheet</h4>
+                  <p>Professional-grade records for every check you write, built around the one field that matters most: your thesis, written on the day you invest.</p>
+                </div>
+                <ul class="checks"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>A master register: vehicle, round, cost basis, phase, multiple to date</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Thesis, contacts, distributions and your own document copies</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#0668f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Tax and cost basis records, plus a quarterly review log</li></ul>
+              </div>
+            </li>
+          </ol>
         </div>
       </div>
 
@@ -578,8 +675,9 @@ section{position:relative}
           <p class="what">Digital Book + Investor Toolkit</p>
           <ul>
             <li>The full digital book<span>Instant download</span></li>
-            <li>8 investor worksheets<span>Downloadable</span></li>
-            <li>The Philosophy-First Framework<span>Inside the book</span></li>
+            <li>Investor Type Self-Assessment<span>PDF, 4 pages</span></li>
+            <li>Phase &amp; Timeframe Reference<span>PDF, 5 pages</span></li>
+            <li>Portfolio Tracking Spreadsheet<span>Excel, 9 tabs</span></li>
             <li>30-day guarantee<span>Full refund</span></li>
           </ul>
           <p class="amt"><sup>$</sup>27</p>
@@ -594,8 +692,8 @@ section{position:relative}
     <p class="next-k rv">After you click</p>
     <ol class="next rv">
       <li><span class="n">01</span><span><b>Check out securely</b>One page, one payment of $27.</span></li>
-      <li><span class="n">02</span><span><b>Download everything</b>The book and all eight worksheets arrive instantly.</span></li>
-      <li><span class="n">03</span><span><b>Start with Tool 01</b>Find your investor type, then read the book with it beside you.</span></li>
+      <li><span class="n">02</span><span><b>Download everything</b>The book and all three tools arrive instantly.</span></li>
+      <li><span class="n">03</span><span><b>Start with Tool 01</b>Pick your investor type, then read the book with the spreadsheet open beside you.</span></li>
     </ol>
   </div>
 </section>
@@ -647,8 +745,8 @@ section{position:relative}
       <h2 class="h2 rv" id="h-faq">Frequently Asked Questions.</h2>
     </div>
     <div class="qa rv">
-      <details open><summary>What exactly do I get for $27?<i aria-hidden="true"></i></summary><div class="a">The full digital edition of The Art of Angel Investing plus the Investor Toolkit: eight downloadable worksheets (Investor Type Self-Assessment, Investment Philosophy Template, Deal Sourcing Tracker, Due Diligence Framework, Founder Coachability Scorecard, 75-15-10 Decision Framework, Portfolio Tracking System and Exit Planning Worksheet). One payment, no subscription.</div></details>
-      <details><summary>Is this a physical book?<i aria-hidden="true"></i></summary><div class="a">No. It's the digital edition, delivered instantly after checkout, so you can start reading and filling in the worksheets today.</div></details>
+      <details open><summary>What exactly do I get for $27?<i aria-hidden="true"></i></summary><div class="a">The full digital edition of The Art of Angel Investing plus the Investor Toolkit: three tools from Tony's Masterclass. The Investor Type Self-Assessment (4-page PDF worksheet), the Investment Phase &amp; Timeframe Reference (5-page PDF) and the Portfolio Tracking Spreadsheet (Excel workbook, 9 tabs). One payment, no subscription.</div></details>
+      <details><summary>Is this a physical book?<i aria-hidden="true"></i></summary><div class="a">No. It's the digital edition, delivered instantly after checkout. The two PDFs print on standard letter paper and the spreadsheet opens in Excel, Google Sheets or Numbers.</div></details>
       <details><summary>Do I need to be an accredited investor?<i aria-hidden="true"></i></summary><div class="a">No. Crowdfunding platforms let non-accredited investors back startups, and you can start from $100. The book is about judgment, which matters at any check size.</div></details>
       <details><summary>I've never invested in a startup. Is this too advanced?<i aria-hidden="true"></i></summary><div class="a">It was written for exactly that moment. Tony starts with how the asset class works and builds up to diligence, portfolio and exits. If you already have a check or two in, the toolkit turns what you did by instinct into a process you can repeat.</div></details>
       <details><summary>Is this investment advice?<i aria-hidden="true"></i></summary><div class="a">No. It's education. Angel investing involves a high degree of risk, including the loss of your entire investment, and no returns are promised or implied.</div></details>
@@ -726,6 +824,8 @@ const CONFIG = { CHECKOUT: '' };
     vsl.addEventListener('timeupdate', () => { if (!vsl.muted && vsl.duration) [25, 50, 75].forEach(q => { if (!sent[q] && vsl.currentTime / vsl.duration * 100 >= q) { sent[q] = 1; track('vsl_progress', {percent: q}); } }); });
     vsl.addEventListener('play', () => { if (!vsl.muted && !sent.play) { sent.play = 1; track('vsl_play'); } });
     vsl.addEventListener('ended', () => { if (!vsl.muted) track('vsl_complete'); }); }
+
+  document.querySelectorAll('.ten-row li').forEach((li, i) => li.style.setProperty('--i', i));
 
   // arrival reveals
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
